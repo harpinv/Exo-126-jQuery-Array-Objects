@@ -18,36 +18,27 @@ let arrObj = [
 
 document.body.style.textAlign = "center";
 
+let bloc = function () {
+    let photo1 = document.createElement('img');
+    photo1.src = arrObj[0].avatar;
+    document.body.append(photo1);
+    let div1 = document.createElement('div');
+    div1.innerHTML = arrObj[0].person + " (" + arrObj[0].age + ")";
+    document.body.append(div1);
 
-let image = document.getElementById('image')
-let contenue = document.getElementById('contenue');
-let precedent = document.getElementById('precedent');
-let suivant = document.getElementById('suivant');
+    let photo2 = document.createElement('img');
+    photo2.src = arrObj[1].avatar;
+    document.body.append(photo2);
+    let div2 = document.createElement('div');
+    div2.innerHTML = arrObj[1].person + " (" + arrObj[1].age + ")";
+    document.body.append(div2);
 
-precedent.style.margin = "50px";
-suivant.style.margin = "50px";
-precedent.style.fontSize = "20px";
-suivant.style.fontSize = "20px";
-precedent.style.fontWeight = "bolder";
-suivant.style.fontWeight = "bolder";
-
-
-//Methode js native pour parcourir un tableau d'objets ( avec for...in )
-for (let i in arrObj) {
-    image.src = arrObj[i].avatar;
-    contenue.innerHTML = arrObj[i].person + " (" + arrObj[i].age + ")";
-
-    precedent.addEventListener('click', function () {
-        i--;
-        image.src = arrObj[i].avatar;
-        contenue.innerHTML = arrObj[i].person + " (" + arrObj[i].age + ")";
-    })
-
-    suivant.addEventListener('click', function () {
-        i++;
-        image.src = arrObj[i].avatar;
-        contenue.innerHTML = arrObj[i].person + " (" + arrObj[i].age + ")";
-    })
+    let photo3 = document.createElement('img');
+    photo3.src = arrObj[2].avatar;
+    document.body.append(photo3);
+    let div3 = document.createElement('div');
+    div3.innerHTML = arrObj[2].person + " (" + arrObj[2].age + ")";
+    document.body.append(div3);
 }
 
-
+bloc();
